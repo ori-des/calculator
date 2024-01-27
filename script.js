@@ -2,6 +2,9 @@ let firstNumber;
 let secondNumber;
 let operator;
 
+const display = document.querySelector('#screen-text');
+display.textContent = "Hi";
+
 function operate(firstNumber, operator, secondNumber) {
     if (operator === "+") {
         return add(firstNumber, secondNumber);
@@ -15,17 +18,17 @@ function operate(firstNumber, operator, secondNumber) {
 }
 
 function add(a, b) {
-    return a + b;
+    display.textContent = a + b;
 };
 
 function subtract(a, b) {
-    return a - b;
+    display.textContent = a - b;
 };
 
 function multiply(a, b) {
-    return a * b;
+    display.textContent = a * b;
 };
 
 function divide(a, b) {
-    return a / b;
+    display.textContent = a / b;
 };
