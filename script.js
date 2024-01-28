@@ -1,6 +1,6 @@
-let firstNumber;
-let secondNumber;
-let operator;
+let firstNumber = 0;
+let secondNumber = 0;
+let operator = "";
 
 const display = document.querySelector('#screen-text');
 const screen = document.querySelector('#screen-text-up');
@@ -14,11 +14,15 @@ buttons.forEach(button => button.addEventListener('click', digit));
 
 
 function clear() {
+    firstNumber = 0;
+    secondNumber = 0;
+    operator = "";
     screen.innerText = "";
 }
 
 function digit(event) {
-    screen.textContent = event.target.innerText;
+    let dig = event.target.innerText;
+    screen.textContent += dig;
 }
 
 function operate(firstNumber, operator, secondNumber) {
