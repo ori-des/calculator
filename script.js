@@ -5,6 +5,7 @@ let operator = "";
 const display = document.querySelector('#screen-text');
 const screen = document.querySelector('#screen-text-up');
 const buttons = document.querySelectorAll('.digit');
+const equalBtn = document.querySelector('#equal');
 const clearBtn = document.querySelector('#clear');
 display.textContent = "Hi";
 
