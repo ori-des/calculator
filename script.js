@@ -8,9 +8,14 @@ const buttons = document.querySelectorAll('.digit');
 const clearBtn = document.querySelector('#clear');
 display.textContent = "Hi";
 
-clearBtn.addEventListener('click', () => screen.innerText = '');
+clearBtn.addEventListener('click', clear);
 
 buttons.forEach(button => button.addEventListener('click', digit));
+
+
+function clear() {
+    screen.innerText = "";
+}
 
 function digit(event) {
     screen.textContent = event.target.innerText;
