@@ -3,7 +3,17 @@ let secondNumber;
 let operator;
 
 const display = document.querySelector('#screen-text');
+const screen = document.querySelector('#screen-text-up');
+const buttons = document.querySelectorAll('.digit');
 display.textContent = "Hi";
+
+buttons.forEach(function(button) {
+    button.addEventListener('click', digit)
+})
+
+function digit(event) {
+    screen.textContent = event.target.innerText;
+}
 
 function operate(firstNumber, operator, secondNumber) {
     if (operator === "+") {
