@@ -4,15 +4,16 @@ let operator = "";
 
 const display = document.querySelector('#screen-text');
 const screen = document.querySelector('#screen-text-up');
-const buttons = document.querySelectorAll('.digit');
+const digitBtns = document.querySelectorAll('.digit');
+const operatorBtns = document.querySelectorAll('.operator');
 const equalBtn = document.querySelector('#equal');
 const clearBtn = document.querySelector('#clear');
 display.textContent = "Hi";
 
 clearBtn.addEventListener('click', clear);
 
-buttons.forEach(button => button.addEventListener('click', digit));
-
+digitBtns.forEach(button => button.addEventListener('click', digit));
+operatorBtns.forEach(button => button.addEventListener('click'), )
 
 function clear() {
     firstNumber = 0;
@@ -23,7 +24,7 @@ function clear() {
 
 function digit(event) {
     let dig = event.target.innerText;
-    screen.textContent += dig;
+    firstNumber = screen.textContent += dig;
 }
 
 function operate(firstNumber, operator, secondNumber) {
