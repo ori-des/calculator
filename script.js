@@ -2,7 +2,7 @@ let firstNumber = 0;
 let secondNumber = 0;
 let operator = "";
 let operatorOn = false;
-let calculating = false;
+// let calculating = false;
 
 const displayOperator = document.querySelector('#screen-text');
 const screenUp = document.querySelector('#screen-text-up');
@@ -42,9 +42,9 @@ function digit(event) {
     } if (operatorOn) {
         secondNumber = Number(screenDown.textContent += dig);
         calculating = true;
-    } if (calculating) {
-        operate(firstNumber, operator, secondNumber);
-    }
+    } // if (calculating) {
+      // operate(firstNumber, operator, secondNumber);
+    //}
 }
 
 function operate(firstNumber, operator, secondNumber) {
