@@ -3,14 +3,14 @@ let secondNumber = 0;
 let operator = "";
 let operatorOn = false;
 
-const display = document.querySelector('#screen-text');
+const displayOperator = document.querySelector('#screen-text');
 const screenUp = document.querySelector('#screen-text-up');
 const screenDown = document.querySelector('#screen-text-down');
 const digitBtns = document.querySelectorAll('.digit');
 const operatorBtns = document.querySelectorAll('.operator');
 const equalBtn = document.querySelector('#equal');
 const clearBtn = document.querySelector('#clear');
-display.textContent = "Hi";
+displayOperator.textContent = "Hi";
 
 clearBtn.addEventListener('click', clear);
 
@@ -20,7 +20,7 @@ operatorBtns.forEach(button => button.addEventListener('click', getOperator));
 function getOperator(event) {
     operatorOn = true;
     operator = event.target.textContent;
-    display.textContent = operator;
+    displayOperator.textContent = operator;
 }
 
 function clear() {
@@ -30,7 +30,7 @@ function clear() {
     operatorOn = false;
     screenUp.textContent = "";
     screenDown.textContent = "";
-    display.textContent = "";
+    displayOperator.textContent = "";
 
 }
 
@@ -57,17 +57,17 @@ function operate(firstNumber, operator, secondNumber) {
 }
 
 function add(a, b) {
-    display.textContent = a + b;
+    screenUp.textContent = a + b;
 };
 
 function subtract(a, b) {
-    display.textContent = a - b;
+    screenUp.textContent = a - b;
 };
 
 function multiply(a, b) {
-    display.textContent = a * b;
+    screenUp.textContent = a * b;
 };
 
 function divide(a, b) {
-    display.textContent = a / b;
+    screenUp.textContent = a / b;
 };
