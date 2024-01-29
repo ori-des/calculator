@@ -65,6 +65,7 @@ function add(a, b) {
     operator = "";
     displayOperator.textContent = "";
     screenDown.textContent = "";
+    operatorOn = false;
     calculating = false;
 };
 
@@ -74,6 +75,7 @@ function subtract(a, b) {
     operator = "";
     displayOperator.textContent = "";
     screenDown.textContent = "";
+    operatorOn = false;
     calculating = false;
 };
 
@@ -83,6 +85,7 @@ function multiply(a, b) {
     operator = "";
     displayOperator.textContent = "";
     screenDown.textContent = "";
+    operatorOn = false;
     calculating = false;
 };
 
@@ -92,5 +95,6 @@ function divide(a, b) {
     operator = "";
     displayOperator.textContent = "";
     screenDown.textContent = "";
+    operatorOn = false;
     calculating = false;
 };
