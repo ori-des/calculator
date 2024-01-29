@@ -57,17 +57,33 @@ function operate(firstNumber, operator, secondNumber) {
 }
 
 function add(a, b) {
-    screenUp.textContent = a + b;
+    firstNumber = screenUp.textContent = a + b;
+    secondNumber = 0;
+    operator = "";
+    displayOperator.textContent = "";
+    screenDown.textContent = "";
 };
 
 function subtract(a, b) {
-    screenUp.textContent = a - b;
+    firstNumber = screenUp.textContent = a - b;
+    secondNumber = 0;
+    operator = "";
+    displayOperator.textContent = "";
+    screenDown.textContent = "";
 };
 
 function multiply(a, b) {
-    screenUp.textContent = a * b;
+    firstNumber = screenUp.textContent = a * b;
+    secondNumber = 0;
+    operator = "";
+    displayOperator.textContent = "";
+    screenDown.textContent = "";
 };
 
 function divide(a, b) {
-    screenUp.textContent = a / b;
+    firstNumber = screenUp.textContent = a / b;
+    secondNumber = 0;
+    operator = "";
+    displayOperator.textContent = "";
+    screenDown.textContent = "";
 };
