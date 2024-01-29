@@ -2,6 +2,7 @@ let firstNumber = 0;
 let secondNumber = 0;
 let operator = "";
 let operatorOn = false;
+let calculating = false;
 
 const displayOperator = document.querySelector('#screen-text');
 const screenUp = document.querySelector('#screen-text-up');
@@ -40,6 +41,9 @@ function digit(event) {
         firstNumber = Number(screenUp.textContent += dig);
     } if (operatorOn) {
         secondNumber = Number(screenDown.textContent += dig);
+        calculating = true;
+    } if (calculating) {
+        operate(firstNumber, operator, secondNumber);
     }
 }
 
@@ -61,6 +65,7 @@ function add(a, b) {
     operator = "";
     displayOperator.textContent = "";
     screenDown.textContent = "";
+    calculating = false;
 };
 
 function subtract(a, b) {
@@ -69,6 +74,7 @@ function subtract(a, b) {
     operator = "";
     displayOperator.textContent = "";
     screenDown.textContent = "";
+    calculating = false;
 };
 
 function multiply(a, b) {
@@ -77,6 +83,7 @@ function multiply(a, b) {
     operator = "";
     displayOperator.textContent = "";
     screenDown.textContent = "";
+    calculating = false;
 };
 
 function divide(a, b) {
@@ -85,4 +92,5 @@ function divide(a, b) {
     operator = "";
     displayOperator.textContent = "";
     screenDown.textContent = "";
+    calculating = false;
 };
