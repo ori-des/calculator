@@ -10,7 +10,6 @@ const digitBtns = document.querySelectorAll('.digit');
 const operatorBtns = document.querySelectorAll('.operator');
 const equalBtn = document.querySelector('#equal');
 const clearBtn = document.querySelector('#clear');
-displayOperator.textContent = "Hi";
 
 clearBtn.addEventListener('click', clear);
 digitBtns.forEach(button => button.addEventListener('click', digit));
