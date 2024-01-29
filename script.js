@@ -4,7 +4,8 @@ let operator = "";
 let operatorOn = false;
 
 const display = document.querySelector('#screen-text');
-const screen = document.querySelector('#screen-text-up');
+const screenUp = document.querySelector('#screen-text-up');
+const screenDown = document.querySelector('#screen-text-down');
 const digitBtns = document.querySelectorAll('.digit');
 const operatorBtns = document.querySelectorAll('.operator');
 const equalBtn = document.querySelector('#equal');
@@ -18,7 +19,7 @@ operatorBtns.forEach(button => button.addEventListener('click', getOperator));
 
 function getOperator(event) {
     operatorOn = true;
-    operator = event.target.innerText;
+    operator = event.target.textContent;
     display.textContent = operator;
 }
 
@@ -27,15 +28,20 @@ function clear() {
     secondNumber = 0;
     operator = "";
     operatorOn = false;
-    screen.innerText = "";
-    display.innerText = "";
+    screenUp.textContent = "";
+    screenDown.textContent = "";
+    display.textContent = "";
 
 }
 
 function digit(event) {
-    let dig = event.target.innerText;
+    let dig = event.target.textContent;
     if (!operatorOn) {
-    firstNumber = Number(screen.textContent += dig);
+        console.log(dig);
+        firstNumber = Number(screenUp.textContent += dig);
+    } if (operatorOn) {
+        dig = event.target.textContent;
+        secondNumber = Number(screenDown.textContent += dig);
     }
 }
 
