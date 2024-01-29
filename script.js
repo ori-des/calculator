@@ -13,9 +13,9 @@ const clearBtn = document.querySelector('#clear');
 displayOperator.textContent = "Hi";
 
 clearBtn.addEventListener('click', clear);
-
 digitBtns.forEach(button => button.addEventListener('click', digit));
 operatorBtns.forEach(button => button.addEventListener('click', getOperator));
+equalBtn.addEventListener('click', () => operate(firstNumber, operator, secondNumber));
 
 function getOperator(event) {
     operatorOn = true;
