@@ -40,7 +40,6 @@ function digit(event) {
         console.log(dig);
         firstNumber = Number(screenUp.textContent += dig);
     } if (operatorOn) {
-        dig = event.target.textContent;
         secondNumber = Number(screenDown.textContent += dig);
     }
 }
