@@ -62,7 +62,7 @@ function operate(firstNumber, operator, secondNumber) {
         return add(firstNumber, secondNumber);
     } if (operator === "-") {
         return subtract(firstNumber, secondNumber);
-    } if (operator === "x") {
+    } if (operator === "*") {
         return multiply(firstNumber, secondNumber);
     } if (operator === "÷") {
         return divide(firstNumber, secondNumber);
