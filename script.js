@@ -1,6 +1,7 @@
 let firstNumber = 0;
 let secondNumber = 0;
 let operator = "";
+let secondOperator = "";
 let operatorOn = false;
 let calculating = false;
 
@@ -20,6 +21,9 @@ equalBtn.addEventListener('click', () => operate(firstNumber, operator, secondNu
 function getOperator(event) {
     if (!operatorOn) {
         operator = event.target.textContent;
+    } if (operatorOn) {
+        secondOperator = event.target.textContent;
+        calculating = true;
     }
     operatorOn = true;
     displayOperator.textContent = operator;
@@ -46,7 +50,6 @@ function digit(event) {
         firstNumber = Number(screenUp.textContent += dig);
     } if (operatorOn) {
         secondNumber = Number(screenDown.textContent += dig);
-        calculating = true;
     } 
 }
 
