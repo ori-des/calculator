@@ -51,7 +51,6 @@ function clear() {
 function digit(event) {
     let dig = event.target.textContent;
     if (!operatorOn) {
-        console.log(dig);
         firstNumber = Number(screenUp.textContent += dig);
     } if (operatorOn) {
         secondNumber = Number(screenDown.textContent += dig);
