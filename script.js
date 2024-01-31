@@ -70,81 +70,61 @@ function operate(firstNumber, operator, secondNumber) {
 }
 
 function add(a, b) {
+    firstNumber = screenUp.textContent = a + b;
+    secondNumber = 0;
+    screenDown.textContent = "";
+    calculating = false;
     if (secondOperator !== "") {
-        firstNumber = screenUp.textContent = a + b;
         operator = secondOperator;
         displayOperator.textContent = operator;
-        screenDown.textContent = "";
-        secondNumber = 0;
-        operatorOn = true;
-        calculating = false;
     } else if (secondOperator === "") {
-        firstNumber = screenUp.textContent = a + b;
-        secondNumber = 0;
         operator = "";
         displayOperator.textContent = "";
-        screenDown.textContent = "";
         operatorOn = false;
-        calculating = false;
     }
 };
 
 function subtract(a, b) {
+    firstNumber = screenUp.textContent = a - b;
+    secondNumber = 0;
+    screenDown.textContent = "";
+    calculating = false;
     if (secondOperator !== "") {
-        firstNumber = screenUp.textContent = a - b;
         operator = secondOperator;
         displayOperator.textContent = operator;
-        screenDown.textContent = "";
-        secondNumber = 0;
-        operatorOn = true;
-        calculating = false;
     } else if (secondOperator === "") {
-        firstNumber = screenUp.textContent = a - b;
-        secondNumber = 0;
         operator = "";
         displayOperator.textContent = "";
-        screenDown.textContent = "";
         operatorOn = false;
-        calculating = false;
     }
 };
 
 function multiply(a, b) {
+    firstNumber = screenUp.textContent = a * b;
+    secondNumber = 0;
+    screenDown.textContent = "";
+    calculating = false;
     if (secondOperator !== "") {
-        firstNumber = screenUp.textContent = a * b;
         operator = secondOperator;
         displayOperator.textContent = operator;
-        screenDown.textContent = "";
-        secondNumber = 0;
-        operatorOn = true;
-        calculating = false;
     } else if (secondOperator === "") {
-        firstNumber = screenUp.textContent = a * b;
-        secondNumber = 0;
         operator = "";
         displayOperator.textContent = "";
-        screenDown.textContent = "";
         operatorOn = false;
-        calculating = false;
     }
 };
 
 function divide(a, b) {
+    firstNumber = screenUp.textContent = a / b;
+    secondNumber = 0;
+    screenDown.textContent = "";
+    calculating = false;
     if (secondOperator !== "") {
-        firstNumber = screenUp.textContent = a / b;
         operator = secondOperator;
         displayOperator.textContent = operator;
-        screenDown.textContent = "";
-        secondNumber = 0;
-        operatorOn = true;
-        calculating = false;
     } else if (secondOperator === "") {
-        firstNumber = screenUp.textContent = a / b;
-        secondNumber = 0;
         operator = "";
         displayOperator.textContent = "";
-        screenDown.textContent = "";
         operatorOn = false;
-        calculating = false;
     }
 };
