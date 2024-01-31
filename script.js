@@ -16,7 +16,7 @@ const clearBtn = document.querySelector('#clear');
 clearBtn.addEventListener('click', clear);
 digitBtns.forEach(button => button.addEventListener('click', digit));
 operatorBtns.forEach(button => button.addEventListener('click', getOperator));
-equalBtn.addEventListener('click', () => operate(firstNumber, operator, secondNumber));
+equalBtn.addEventListener('click', getEqual);
 
 function getOperator(event) {
     if (!operatorOn) {
@@ -30,6 +30,11 @@ function getOperator(event) {
     if (calculating) {
         operate(firstNumber, operator, secondNumber);
       }
+}
+
+function getEqual() {
+    secondOperator = "";
+    operate(firstNumber, operator, secondNumber);
 }
 
 function clear() {
@@ -66,23 +71,43 @@ function operate(firstNumber, operator, secondNumber) {
 }
 
 function add(a, b) {
-    firstNumber = screenUp.textContent = a + b;
-    secondNumber = 0;
-    operator = "";
-    displayOperator.textContent = "";
-    screenDown.textContent = "";
-    operatorOn = false;
-    calculating = false;
+    if (secondOperator !== "") {
+        firstNumber = screenUp.textContent = a + b;
+        operator = secondOperator;
+        displayOperator.textContent = operator;
+        screenDown.textContent = "";
+        secondNumber = 0;
+        operatorOn = true;
+        calculating = false;
+    } else if (secondOperator === "") {
+        firstNumber = screenUp.textContent = a + b;
+        secondNumber = 0;
+        operator = "";
+        displayOperator.textContent = "";
+        screenDown.textContent = "";
+        operatorOn = false;
+        calculating = false;
+    }
 };
 
 function subtract(a, b) {
-    firstNumber = screenUp.textContent = a - b;
-    secondNumber = 0;
-    operator = "";
-    displayOperator.textContent = "";
-    screenDown.textContent = "";
-    operatorOn = false;
-    calculating = false;
+    if (secondOperator !== "") {
+        firstNumber = screenUp.textContent = a - b;
+        operator = secondOperator;
+        displayOperator.textContent = operator;
+        screenDown.textContent = "";
+        secondNumber = 0;
+        operatorOn = true;
+        calculating = false;
+    } else if (secondOperator === "") {
+        firstNumber = screenUp.textContent = a - b;
+        secondNumber = 0;
+        operator = "";
+        displayOperator.textContent = "";
+        screenDown.textContent = "";
+        operatorOn = false;
+        calculating = false;
+    }
 };
 
 function multiply(a, b) {
