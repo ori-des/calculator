@@ -33,6 +33,7 @@ function clear() {
     secondNumber = 0;
     operator = "";
     operatorOn = false;
+    calculating = false;
     screenUp.textContent = "";
     screenDown.textContent = "";
     displayOperator.textContent = "";
