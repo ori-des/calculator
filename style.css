@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 h1 {
@@ -18,6 +19,7 @@ h1 {
     width: 200px;
     border: solid;
     padding: 10px;
+    background-color: bisque;
 }
 
 #screen {
@@ -28,6 +30,7 @@ h1 {
     width: 150px;
     height: 50px;
     padding: 5px;
+    background-color: coral;
 }
 
 #buttons {
