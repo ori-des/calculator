@@ -1,6 +1,9 @@
 @font-face {
-    font-family: dseg;
-    src: url(../fonts/DSEG7Modern-BoldItalic.ttf);
+    font-family: 'DSEG7 Modern';
+    src: url(../fonts/DSEG7Modern-BoldItalic.ttf) format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
 }
 
 body {
@@ -66,7 +69,7 @@ p {
     font-size: 30px;
     padding: 5px;
     font-weight: bolder;
-    font-family: dseg;
+    font-family: 'DSEG7 Modern';
 }
 
 #buttons {
