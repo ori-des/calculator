@@ -41,6 +41,7 @@ function clear() {
     firstNumber = 0;
     secondNumber = 0;
     operator = "";
+    secondOperator = "";
     operatorOn = false;
     calculating = false;
     screenUp.textContent = "";
