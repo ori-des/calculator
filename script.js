@@ -116,8 +116,11 @@ function multiply(a, b) {
 };
 
 function divide(a, b) {
-    firstNumber = screenUp.textContent = +(a / b).toFixed(2);
-    console.log(typeof firstNumber);
+    if (b === 0) {
+        screenUp.textContent = "lol";
+    } else {
+        firstNumber = screenUp.textContent = +(a / b).toFixed(2);
+    }
     secondNumber = 1;
     screenDown.textContent = "";
     calculating = false;
