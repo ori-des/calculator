@@ -101,7 +101,7 @@ function subtract(a, b) {
 
 function multiply(a, b) {
     firstNumber = screenUp.textContent = a * b;
-    secondNumber = 0;
+    secondNumber = 1;
     screenDown.textContent = "";
     calculating = false;
     if (secondOperator !== "") {
@@ -116,7 +116,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
     firstNumber = screenUp.textContent = a / b;
-    secondNumber = 0;
+    secondNumber = 1;
     screenDown.textContent = "";
     calculating = false;
     if (secondOperator !== "") {
