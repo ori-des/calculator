@@ -29,7 +29,10 @@ function getOperator(event) {
     }
     operatorOn = true;
     displayOperator.textContent = operator;
-    if (calculating && secondNumber) {
+    if (!secondNumber) {
+        secondNumber = firstNumber;
+    }
+    if (calculating) {
         operate(firstNumber, operator, secondNumber);
     }
 };
