@@ -11,11 +11,13 @@ const screenDown = document.querySelector('#screen-text-down');
 const digitBtns = document.querySelectorAll('.digit');
 const operatorBtns = document.querySelectorAll('.operator');
 const equalBtn = document.querySelector('#equal');
+const decimalBtn = document.querySelector('#decimal');
 const clearBtn = document.querySelector('#clear');
 
 clearBtn.addEventListener('click', clear);
 digitBtns.forEach(button => button.addEventListener('click', getInput));
 operatorBtns.forEach(button => button.addEventListener('click', getOperator));
+decimalBtn.addEventListener('click', getInput);
 equalBtn.addEventListener('click', getEqual);
 
 function getOperator(event) {
