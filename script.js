@@ -41,6 +41,9 @@ function getOperator(event) {
 
 function getEqual() {
     secondOperator = "";
+    if ((operator === "÷" || operator === "*") && !secondNumber) {
+        secondNumber = 1;
+    }
     operate(firstNumber, operator, secondNumber);
 };
 
