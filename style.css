@@ -84,7 +84,9 @@ p {
 }
 
 button.digit ,
-button.operator {
+button.operator,
+#decimal,
+#plus {
     width: 65px;
     height: 65px;
     background-color: rgb(61, 83, 209);
@@ -96,8 +98,7 @@ button.operator {
 
 #clear ,
 #equal ,
-#plus ,
-#zero {
+#obelus {
     width: 136px;
     height: 65px;
     background-color: rgb(61, 83, 209);
