@@ -50,6 +50,7 @@ function clear() {
     screenUp.textContent = "";
     screenDown.textContent = "";
     displayOperator.textContent = "";
+    decimalBtn.addEventListener('click', getInput);
 };
 
 function getInput(event) {
