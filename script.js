@@ -1,5 +1,5 @@
-let firstNumber = 0;
-let secondNumber = 0;
+let firstNumber = null;
+let secondNumber = null;
 let operator = "";
 let secondOperator = "";
 let operatorOn = false;
@@ -27,7 +27,7 @@ function getOperator(event) {
     }
     operatorOn = true;
     displayOperator.textContent = operator;
-    if (calculating) {
+    if (calculating && secondNumber) {
         operate(firstNumber, operator, secondNumber);
       }
 }
@@ -39,7 +39,7 @@ function getEqual() {
 
 function clear() {
     firstNumber = 0;
-    secondNumber = 0;
+    secondNumber = null;
     operator = "";
     secondOperator = "";
     operatorOn = false;
@@ -72,7 +72,7 @@ function operate(firstNumber, operator, secondNumber) {
 
 function add(a, b) {
     firstNumber = screenUp.textContent = a + b;
-    secondNumber = 0;
+    secondNumber = null;
     screenDown.textContent = "";
     calculating = false;
     if (secondOperator !== "") {
@@ -87,7 +87,7 @@ function add(a, b) {
 
 function subtract(a, b) {
     firstNumber = screenUp.textContent = a - b;
-    secondNumber = 0;
+    secondNumber = null;
     screenDown.textContent = "";
     calculating = false;
     if (secondOperator !== "") {
@@ -102,7 +102,7 @@ function subtract(a, b) {
 
 function multiply(a, b) {
     firstNumber = screenUp.textContent = +(a * b).toFixed(2);
-    secondNumber = 1;
+    secondNumber = null;
     screenDown.textContent = "";
     calculating = false;
     if (secondOperator !== "") {
@@ -121,7 +121,7 @@ function divide(a, b) {
     } else {
         firstNumber = screenUp.textContent = +(a / b).toFixed(2);
     }
-    secondNumber = 1;
+    secondNumber = null;
     screenDown.textContent = "";
     calculating = false;
     if (secondOperator !== "") {
