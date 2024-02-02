@@ -21,6 +21,7 @@ decimalBtn.addEventListener('click', getInput);
 equalBtn.addEventListener('click', getEqual);
 
 function getOperator(event) {
+    decimalBtn.addEventListener('click', getInput);
     if (!operatorOn) {
         operator = event.target.textContent;
     } if (operatorOn) {
@@ -32,12 +33,12 @@ function getOperator(event) {
     if (calculating && secondNumber) {
         operate(firstNumber, operator, secondNumber);
       }
-}
+};
 
 function getEqual() {
     secondOperator = "";
     operate(firstNumber, operator, secondNumber);
-}
+};
 
 function clear() {
     firstNumber = 0;
@@ -49,16 +50,18 @@ function clear() {
     screenUp.textContent = "";
     screenDown.textContent = "";
     displayOperator.textContent = "";
-}
+};
 
 function getInput(event) {
     let input = event.target.textContent;
-    if (!operatorOn) {
+    if (input === ".") {
+        decimalBtn.removeEventListener('click', getInput)
+    } if (!operatorOn) {
         firstNumber = Number(screenUp.textContent += input);
     } if (operatorOn) {
         secondNumber = Number(screenDown.textContent += input);
     }
-}
+};
 
 function operate(firstNumber, operator, secondNumber) {
     if (operator === "+") {
@@ -70,10 +73,10 @@ function operate(firstNumber, operator, secondNumber) {
     } if (operator === "÷") {
         return divide(firstNumber, secondNumber);
     }
-}
+};
 
 function add(a, b) {
-    firstNumber = screenUp.textContent = a + b;
+    firstNumber = screenUp.textContent = +(a + b).toFixed(2);
     secondNumber = null;
     screenDown.textContent = "";
     calculating = false;
@@ -88,7 +91,7 @@ function add(a, b) {
 };
 
 function subtract(a, b) {
-    firstNumber = screenUp.textContent = a - b;
+    firstNumber = screenUp.textContent = +(a - b).toFixed(2);
     secondNumber = null;
     screenDown.textContent = "";
     calculating = false;
