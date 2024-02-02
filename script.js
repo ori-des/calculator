@@ -40,7 +40,7 @@ function getEqual() {
 };
 
 function clear() {
-    firstNumber = 0;
+    firstNumber = null;
     secondNumber = null;
     operator = "";
     secondOperator = "";
