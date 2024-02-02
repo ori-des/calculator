@@ -16,7 +16,6 @@ const clearBtn = document.querySelector('#clear');
 
 clearBtn.addEventListener('click', clear);
 digitBtns.forEach(button => button.addEventListener('click', getInput));
-operatorBtns.forEach(button => button.addEventListener('click', getOperator));
 decimalBtn.addEventListener('click', getInput);
 equalBtn.addEventListener('click', getEqual);
 
@@ -51,6 +50,7 @@ function clear() {
     screenDown.textContent = "";
     displayOperator.textContent = "";
     decimalBtn.addEventListener('click', getInput);
+    operatorBtns.forEach(button => button.removeEventListener('click', getOperator));
 };
 
 function getInput(event) {
@@ -59,6 +59,7 @@ function getInput(event) {
         decimalBtn.removeEventListener('click', getInput)
     } if (!operatorOn) {
         firstNumber = Number(screenUp.textContent += input);
+        operatorBtns.forEach(button => button.addEventListener('click', getOperator));
     } if (operatorOn) {
         secondNumber = Number(screenDown.textContent += input);
     }
