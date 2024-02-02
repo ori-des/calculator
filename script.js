@@ -29,8 +29,8 @@ function getOperator(event) {
     }
     operatorOn = true;
     displayOperator.textContent = operator;
-    if (!secondNumber) {
-        secondNumber = firstNumber;
+    if ((operator === "÷" || operator === "*" ) && !secondNumber) {
+        secondNumber = 1;
     }
     if (calculating) {
         operate(firstNumber, operator, secondNumber);
