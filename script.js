@@ -32,7 +32,7 @@ function getOperator(event) {
     displayOperator.textContent = operator;
     if (calculating && secondNumber) {
         operate(firstNumber, operator, secondNumber);
-      }
+    }
 };
 
 function getEqual() {
