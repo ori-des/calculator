@@ -27,9 +27,11 @@ function getOperator(event) {
         secondOperator = event.target.textContent;
         calculating = true;
     }
+
     operatorOn = true;
     displayOperator.textContent = operator;
-    if ((operator === "÷" || operator === "*" ) && !secondNumber) {
+
+    if ((operator === "÷" || operator === "*") && !secondNumber) {
         secondNumber = 1;
     }
     if (calculating) {
@@ -131,9 +133,11 @@ function divide(a, b) {
     } else {
         firstNumber = screenUp.textContent = +(a / b).toFixed(2);
     }
+    
     secondNumber = null;
     screenDown.textContent = "";
     calculating = false;
+    
     if (secondOperator !== "") {
         operator = secondOperator;
         displayOperator.textContent = operator;
