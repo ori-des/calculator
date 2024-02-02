@@ -78,6 +78,7 @@ p {
     padding: 5px;
     font-weight: bolder;
     font-family: 'DSEG7 Modern';
+    overflow: hidden;
 }
 
 #buttons {
