@@ -80,7 +80,6 @@ function clear() {
 
 function getInput(event) {
     let input = event.target.textContent;
-    history.push(input);
     if (input === ".") {
         decimalBtn.removeEventListener('click', getInput)
     } if (!operatorOn) {
