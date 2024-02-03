@@ -4,6 +4,7 @@ let operator = "";
 let secondOperator = "";
 let operatorOn = false;
 let calculating = false;
+let click = 0;
 let history = [];
 
 const displayOperator = document.querySelector('#screen-text');
@@ -14,16 +15,35 @@ const operatorBtns = document.querySelectorAll('.operator');
 const equalBtn = document.querySelector('#equal');
 const decimalBtn = document.querySelector('#decimal');
 const clearBtn = document.querySelector('#clear');
+const deleteBtn = document.querySelector('#delete');
 
 clearBtn.addEventListener('click', clear);
 digitBtns.forEach(button => button.addEventListener('click', getInput));
 decimalBtn.addEventListener('click', getInput);
 equalBtn.addEventListener('click', getEqual);
+deleteBtn.addEventListener('click', getDeleted);
+
+function getDeleted() {
+    click++;
+    let str = screenDown.textContent;
+    let opStr = displayOperator.textContent;
+    console.log(opStr);
+    let str2 = screenUp.textContent;
+    if (secondNumber) {
+        secondNumber = Number(screenDown.textContent = str.substring(0, str.length - 1));
+    } if (str.length === 0) {
+        operator = displayOperator.textContent = "";
+        operatorOn = false;
+    } if (str.length === 0 && opStr.length === 0) {
+       firstNumber = Number(screenUp.textContent = str2.substring(0, str2.length - 1));
+    }
+};
 
 function getOperator(event) {
     decimalBtn.addEventListener('click', getInput);
     if (!operatorOn) {
         operator = event.target.textContent;
+        history.push(operator);
     } if (operatorOn) {
         secondOperator = event.target.textContent;
         calculating = true;
