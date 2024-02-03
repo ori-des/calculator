@@ -92,6 +92,27 @@ p {
 }
 
 button.digit,
+#decimal {
+    background-color: rgb(61, 83, 209);
+    color: rgb(212, 223, 221);
+    box-shadow: inset rgb(55, 110, 197) 0px 0px 3px 2px;
+}
+
+#clear,
+#delete {
+    background-color: rgb(215, 202, 82);
+    color: rgb(66, 68, 76);
+    box-shadow: inset rgb(207, 168, 78) 0px 0px 2px 2px;
+}
+
+button.operator,
+#equal {
+    background-color: rgb(223, 223, 212);
+    color: rgb(61, 83, 209);
+    box-shadow: inset rgb(191, 189, 179) 0px 0px 3px 2px;
+}
+
+button.digit,
 button.operator,
 #decimal,
 #obelus,
@@ -99,8 +120,6 @@ button.operator,
 #delete {
     width: 65px;
     height: 65px;
-    background-color: rgb(61, 83, 209);
-    color: rgb(212, 223, 221);
     font-size: 40px;
     font-weight: bolder;
     border-radius: 10px;
@@ -110,8 +129,6 @@ button.operator,
 #equal {
     width: 136px;
     height: 65px;
-    background-color: rgb(61, 83, 209);
-    color: rgb(212, 223, 221);
     font-size: 40px;
     font-weight: bolder;
     border-radius: 10px;
