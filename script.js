@@ -24,7 +24,6 @@ deleteBtn.addEventListener('click', getDeleted);
 function getDeleted() {
     let str = screenDown.textContent;
     let opStr = displayOperator.textContent;
-    console.log(opStr);
     let str2 = screenUp.textContent;
     if (secondNumber) {
         secondNumber = Number(screenDown.textContent = str.substring(0, str.length - 1));
