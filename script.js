@@ -4,8 +4,6 @@ let operator = "";
 let secondOperator = "";
 let operatorOn = false;
 let calculating = false;
-let click = 0;
-let history = [];
 
 const displayOperator = document.querySelector('#screen-text');
 const screenUp = document.querySelector('#screen-text-up');
@@ -24,7 +22,6 @@ equalBtn.addEventListener('click', getEqual);
 deleteBtn.addEventListener('click', getDeleted);
 
 function getDeleted() {
-    click++;
     let str = screenDown.textContent;
     let opStr = displayOperator.textContent;
     console.log(opStr);
@@ -43,7 +40,6 @@ function getOperator(event) {
     decimalBtn.addEventListener('click', getInput);
     if (!operatorOn) {
         operator = event.target.textContent;
-        history.push(operator);
     } if (operatorOn) {
         secondOperator = event.target.textContent;
         calculating = true;
