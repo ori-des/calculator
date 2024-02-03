@@ -4,6 +4,7 @@ let operator = "";
 let secondOperator = "";
 let operatorOn = false;
 let calculating = false;
+let history = [];
 
 const displayOperator = document.querySelector('#screen-text');
 const screenUp = document.querySelector('#screen-text-up');
@@ -63,6 +64,7 @@ function clear() {
 
 function getInput(event) {
     let input = event.target.textContent;
+    history.push(input);
     if (input === ".") {
         decimalBtn.removeEventListener('click', getInput)
     } if (!operatorOn) {

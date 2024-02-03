@@ -91,10 +91,12 @@ p {
     gap: 5px;
 }
 
-button.digit ,
+button.digit,
 button.operator,
 #decimal,
-#plus {
+#obelus,
+#plus,
+#delete {
     width: 65px;
     height: 65px;
     background-color: rgb(61, 83, 209);
@@ -104,9 +106,8 @@ button.operator,
     border-radius: 10px;
 }
 
-#clear ,
-#equal ,
-#obelus {
+#clear,
+#equal {
     width: 136px;
     height: 65px;
     background-color: rgb(61, 83, 209);
