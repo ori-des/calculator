@@ -57,9 +57,6 @@ function getOperator(event) {
 
 function getEqual() {
     secondOperator = "";
-    if (operator === "÷" && !secondNumber) {
-        secondNumber = 1;
-    }
     operate(firstNumber, operator, secondNumber);
 };
 
