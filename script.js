@@ -47,7 +47,7 @@ function getOperator(event) {
     operatorOn = true;
     displayOperator.textContent = operator;
 
-    if ((operator === "÷" || operator === "×") && !secondNumber) {
+    if (operator === "÷" && !secondNumber) {
         secondNumber = 1;
     }
     if (calculating) {
@@ -57,7 +57,7 @@ function getOperator(event) {
 
 function getEqual() {
     secondOperator = "";
-    if ((operator === "÷" || operator === "×") && !secondNumber) {
+    if (operator === "÷" && !secondNumber) {
         secondNumber = 1;
     }
     operate(firstNumber, operator, secondNumber);
